@@ -1,6 +1,6 @@
 from mcp.server.fastmcp import Context, FastMCP
 
-from mcp_server.settings import build_retrieval_dependencies
+from settings import build_retrieval_dependencies
 
 mcp = FastMCP("medical-report-retrieval", host="0.0.0.0", port=8899, stateless_http=True)
 

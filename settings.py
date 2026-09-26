@@ -1,4 +1,7 @@
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 from domain.ports import EmbeddingPort, VectorStorePort
 from infrastructure.azure_ai_search_vector_store import AzureAISearchVectorStore

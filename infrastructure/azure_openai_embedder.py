@@ -1,7 +1,7 @@
 from langchain_openai import AzureOpenAIEmbeddings
 
 class AzureOpenAIEmbedder:
-    """Implements EmbeddingPort (domain/ports.py)."""
+    """Implements EmbeddingPort"""
 
     def __init__(self, endpoint: str, api_key: str, deployment_name: str, api_version: str):
         self._client = AzureOpenAIEmbeddings(
