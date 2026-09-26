@@ -2,3 +2,4 @@ mcp>=1.28,<2
 azure-search-documents>=11.5
 langchain-openai>=0.2
 dotenv
+starlette

@@ -1,4 +1,6 @@
 from mcp.server.fastmcp import Context, FastMCP
+from starlette.requests import Request
+from starlette.responses import JSONResponse
 
 from settings import build_retrieval_dependencies
 
@@ -31,6 +33,10 @@ def search_report_chunks(ctx: Context, query: str, top_k: int = 5) -> list[dict]
         }
         for r in results
     ]
+
+@mcp.custom_route("/health", methods=["GET"])
+async def health_check(request: Request):
+    return JSONResponse({"status": "ok"})
 
 if __name__ == "__main__":
     mcp.run(transport="streamable-http")
